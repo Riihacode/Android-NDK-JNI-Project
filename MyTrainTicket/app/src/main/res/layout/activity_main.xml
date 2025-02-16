@@ -1,19 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/sample_text"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/inputNama"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="Nama Mahasiswa"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/inputNIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="NIM"/>
+
+    <EditText
+        android:id="@+id/inputIPK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="IPK"/>
+
+    <EditText
+        android:id="@+id/inputNilai1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Nilai Mata Kuliah 1"/>
+
+    <EditText
+        android:id="@+id/inputNilai2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Nilai Mata Kuliah 2"/>
+
+    <Button
+        android:id="@+id/btnTambah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Mahasiswa"/>
+
+    <Button
+        android:id="@+id/btnTampilkan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tampilkan Data Mahasiswa"/>
+
+    <Button
+        android:id="@+id/btnSorting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Urutkan Berdasarkan IPK"/>
+
+    <Button
+        android:id="@+id/btnSearching"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cari Mahasiswa"/>
+
+    <EditText
+        android:id="@+id/inputCariNIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Cari NIM"/>
+
+    <Button
+        android:id="@+id/btnSimpanFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan ke File"/>
+
+    <Button
+        android:id="@+id/btnBacaFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Baca dari File"/>
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Mahasiswa Akan Ditampilkan Disini"/>
+
+</LinearLayout>
