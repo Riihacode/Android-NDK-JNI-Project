@@ -24,9 +24,19 @@ project("mytrainticket")
 # System.loadLibrary() and pass the name of the library defined here;
 # for GameActivity/NativeActivity derived applications, the same library name must be
 # used in the AndroidManifest.xml file.
-add_library(${CMAKE_PROJECT_NAME} SHARED
+add_library(
+        ${CMAKE_PROJECT_NAME}
+        native-lib
+        SHARED
         # List C/C++ source files with relative paths to this CMakeLists.txt.
-        native-lib.cpp)
+        # native-lib.cpp
+        TicketLogic.cpp
+)
+
+find_library(
+        log-lib
+        log
+)
 
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
@@ -34,4 +44,7 @@ add_library(${CMAKE_PROJECT_NAME} SHARED
 target_link_libraries(${CMAKE_PROJECT_NAME}
         # List libraries link to the target library
         android
-        log)
+        log
+        #native-lib
+        ${log-lib}
+)

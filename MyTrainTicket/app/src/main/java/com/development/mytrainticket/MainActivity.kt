@@ -9,6 +9,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    external fun getSeatStatus(row: Int, col: Int): String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -16,14 +18,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
+        // binding.sampleText.text = stringFromJNI()
     }
 
     /**
      * A native method that is implemented by the 'mytrainticket' native library,
      * which is packaged with this application.
      */
-    external fun stringFromJNI(): String
+    // external fun stringFromJNI(): String
 
     companion object {
         // Used to load the 'mytrainticket' library on application startup.

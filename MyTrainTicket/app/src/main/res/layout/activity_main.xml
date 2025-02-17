@@ -8,87 +8,154 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/inputNama"
-        android:layout_width="match_parent"
+    <!-- Input dan Tombol untuk Cek Status Kursi -->
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Nama Mahasiswa"/>
+        android:text="Cek Status Kursi"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/inputNIM"
+        android:id="@+id/etSeatRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="NIM"/>
+        android:hint="Masukkan Baris Kursi"
+        android:inputType="number" />
 
     <EditText
-        android:id="@+id/inputIPK"
+        android:id="@+id/etSeatCol"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="IPK"/>
-
-    <EditText
-        android:id="@+id/inputNilai1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Nilai Mata Kuliah 1"/>
-
-    <EditText
-        android:id="@+id/inputNilai2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Nilai Mata Kuliah 2"/>
+        android:hint="Masukkan Kolom Kursi"
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/btnTambah"
-        android:layout_width="match_parent"
+        android:id="@+id/btnCheckSeat"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah Mahasiswa"/>
-
-    <Button
-        android:id="@+id/btnTampilkan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tampilkan Data Mahasiswa"/>
-
-    <Button
-        android:id="@+id/btnSorting"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Urutkan Berdasarkan IPK"/>
-
-    <Button
-        android:id="@+id/btnSearching"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cari Mahasiswa"/>
-
-    <EditText
-        android:id="@+id/inputCariNIM"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Cari NIM"/>
-
-    <Button
-        android:id="@+id/btnSimpanFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Simpan ke File"/>
-
-    <Button
-        android:id="@+id/btnBacaFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Baca dari File"/>
+        android:text="Cek Status Kursi" />
 
     <TextView
-        android:id="@+id/txtData"
+        android:id="@+id/tvSeatStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status Kursi: "
+        android:textSize="16sp" />
+
+    <!-- Input dan Tombol untuk Menghitung Total Harga -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung Total Harga"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etPricePerTicket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data Mahasiswa Akan Ditampilkan Disini"/>
+        android:hint="Harga per Tiket"
+        android:inputType="number" />
 
+    <EditText
+        android:id="@+id/etNumberOfTickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jumlah Tiket"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnCalculatePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung Total Harga" />
+
+    <TextView
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Harga: "
+        android:textSize="16sp" />
+
+    <!-- Tombol dan Hasil untuk Menghitung Faktorial -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung Faktorial"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etFactorialNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Angka"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnCalculateFactorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung Faktorial" />
+
+    <TextView
+        android:id="@+id/tvFactorialResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Faktorial: "
+        android:textSize="16sp" />
+
+    <!-- Input dan Tombol untuk Mencari Kursi -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cari Kursi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etSearchSeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nomor Kursi"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnSearchSeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cari Kursi" />
+
+    <TextView
+        android:id="@+id/tvSearchResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Pencarian: "
+        android:textSize="16sp" />
+
+    <!-- Tombol dan Hasil untuk Mengurutkan Kursi -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urutkan Kursi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnSortSeats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urutkan Kursi" />
+
+    <TextView
+        android:id="@+id/tvSortedSeats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kursi Terurut: "
+        android:textSize="16sp" />
 </LinearLayout>
